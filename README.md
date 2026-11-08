@@ -1,48 +1,41 @@
-Can't share source code due to NDA restrictions
-# AI Career Counsellor  
+# AI Career Counsellor
 
-### 🚀 **Next-Gen Career Guidance Powered by AI**  
+**Conversational career guidance powered by LLMs.** The system talks with a user to uncover their skills, interests and strengths, then recommends career paths that fit them.
+
+> Source code is private under an NDA. This repository documents the project and my role in it.
 
 ![Private source repository (code under NDA)](Trail-llms.png)
-*The private source repository. Code is under NDA, so only this snapshot is shared.*
+*The private source repository, shared as a snapshot because the code is under NDA.*
 
-An intelligent career counselling system that combines **large language models (LLMs), neural networks, and conversational AI** to:  
-1. **Discover** your hidden talents, passions, and strengths through natural dialogue  
-2. **Analyze** your skills, interests, and personality traits  
-3. **Recommend** optimal career paths using advanced ML algorithms (In another Repository)
----  
+## My role: main AI engineer
 
-## **✨ Key Features**  
+This was a 3-person team project. I was the main AI engineer and owned the LLM side of the system:
 
-### **1. Conversational Talent Discovery**  
-- **LLM-Powered Chat Interface** – Engages users in natural conversations to uncover skills & interests  
-- **Dynamic Prompt Engineering** – Adapts questioning based on user responses for deeper insights  
-- **Few-Shot Learning** – Uses example-driven prompts to improve relevance of career assessments  
+- **Model selection and integration:** open-source LLMs (Mixtral-8x7B, Mistral 7B) through Hugging Face
+- **Prompt engineering:** dynamic prompts that adapt to the user's previous answers, few-shot examples, and chain-of-thought prompting to make career assessments relevant
+- **Conversation flow:** the LangChain pipeline that runs the talent-discovery dialogue and turns it into a structured profile
+- **Inference server:** the Flask server that exposes the LLM endpoint to the app
 
-### **2. Advanced Career Matching**  
-- **Trail Neural Networks** – ML model that evaluates skills, market trends & personality fit  
-- **Data-Driven Recommendations** – Suggests careers with growth potential and alignment to user profile  
-- **Personalized Reports** – Detailed breakdowns of why certain careers are a strong match  
+## How it works
 
-### **3. Scalable & Deployable**  
-- **FastAPI Backend** – Robust API for integration with web/mobile apps  
-- **LangChain Framework** – Orchestrates LLM interactions for structured career analysis  
-- **Explainable AI** – Clear reasoning behind recommendations (not just a black box)  
----  
+1. **Discover:** an LLM-driven chat asks open questions and adapts its follow-ups to uncover skills, interests and personality traits.
+2. **Analyze:** the conversation is turned into a structured profile of the user's strengths.
+3. **Recommend:** the profile feeds a neural career-matching model (maintained in a separate repository), which suggests careers with an explanation of why each one fits.
 
-## **🛠️ Tech Stack**  
-- **LLMs** → Mixtral-8x7b, Mistral 7b.
-- **Prompt Engineering** → Dynamic prompting, Few shot examples prompting. 
-- **ML Backend** → PyTorch/TensorFlow for neural career matching  
-- **APIs & Deployment** → FastAPI, LangChain  
-- **Dynamic Prompts** → Few-shot learning, chain-of-thought prompting
-- **HuggingFace** → For using opensource models
----  
+## Features
 
-## **💡 Why This Matters**  
-✅ **No Generic Advice** – Truly personalized career insights  
-✅ **Uncover Hidden Potential** – Goes beyond resumes to find strengths  
-✅ **Future-Proof** – Considers job market trends and AI disruption  
-✅ **Scalable Career Coaching** – Makes expert-level guidance accessible  
+- **LLM-powered chat interface** that engages users in natural conversation
+- **Adaptive questioning** based on the user's earlier answers
+- **Few-shot prompting** to keep assessments consistent and relevant
+- **Explainable recommendations:** each suggested career comes with the reasoning behind it
+- **API-first design:** a Flask inference server so web or mobile apps can integrate it
 
----  
+## Tech stack
+
+| Area | Tools |
+|---|---|
+| LLMs | Mixtral-8x7B, Mistral 7B (Hugging Face) |
+| Orchestration | LangChain |
+| Prompting | Dynamic prompts, few-shot examples, chain-of-thought |
+| Serving | Flask inference server |
+| Career matching | Neural network model (separate repository) |
