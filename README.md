@@ -3,6 +3,9 @@ Can't share source code due to NDA restrictions
 
 ### 🚀 **Next-Gen Career Guidance Powered by AI**  
 
+![Private source repository (code under NDA)](Trail-llms.png)
+*The private source repository. Code is under NDA, so only this snapshot is shared.*
+
 An intelligent career counselling system that combines **large language models (LLMs), neural networks, and conversational AI** to:  
 1. **Discover** your hidden talents, passions, and strengths through natural dialogue  
 2. **Analyze** your skills, interests, and personality traits  
